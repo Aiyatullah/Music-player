@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <!-- <img src="logo.png" alt="Logo"> -->
+    </div>
+    <div class="navbar-buttons">
+      <button>About</button>
+      <a href="https://www.linkedin.com/in/aiyatullah-saiyed-8b4538251/" target="_blank"><button>Connect</button></a>
+    </div>
+  </nav>
+
+  <div class="music-player">
+    <div class="container">
+      <div class="left">
+        <p class="text">Select Your Vibe..!</p>
+        <select id="song-selector" class="text1">
+          <option value="A-Man-Without-Love(PagalWorld).mp3">Soothing</option>
+          <option value="Papa-Meri-Jan(PagalWorld).mp3">Bollywood</option>
+          <option value="old.mp3"></option>
+        </select>
+      </div>
+      <div class="right">
+        <div class="music-player">
+          <div class="cd-container">
+            <div class="cd"></div>
+          </div>
+          
+          <audio id="audio-player" src="A-Man-Without-Love(PagalWorld).mp3"></audio>
+          <div class="controls">
+            <button class="prev-btn" onclick="prevSong()">
+              <img class="prev-icon" src="prev.png" alt="Previous">
+            </button>
+            <button class="play-btn" onclick="playPause()">
+            <img class="play-icon" src="play.png" alt="Play">
+            <img class="pause-icon" src="pause.png" alt="Pause">
+            </button>
+            <button class="next-btn" onclick="nextSong()">
+            <img class="next-icon" src="next.png" alt="Next">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

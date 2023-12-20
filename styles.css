@@ -1,0 +1,146 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
+  background-image: url('disc.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(51, 51, 51, 0.8);
+  color: #fff;
+  z-index: 2;
+}
+.navbar-buttons button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  margin-left: 10px;
+  font-size: 14px;
+}
+.music-player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.cd-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+.cd {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("disc.png");
+  border-radius: 50%;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.play-btn,
+.next-btn,
+.prev-btn {
+  margin-left: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  align-items: center;
+}
+.play-btn i {
+  font-size: 48px;
+  color: #333;
+  
+}
+.play-btn .play-icon {
+  display: block;
+ 
+}
+.play-btn .pause-icon {
+  display: none;
+  
+}
+.play-btn img,
+.next-btn img,
+.prev-btn img {
+  width: 40px;
+  height: 40px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.left {
+  flex: 1;
+}
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 400px;
+}
+.right .music-player {
+  margin-right: 20px;
+}
+
+.text {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(34, 215, 167);
+}
+.text1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #FF6F61;
+  width: auto;
+  border-radius: 30px;
+  border-color: pink;
+}
+@media only screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  } 
+  .navbar-buttons {
+    margin-top: 10px;
+  }
+  .music-player {
+    padding: 20px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .right {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .text {
+    font-size: 24px;
+  }
+  .text1 {
+    font-size: 20px;
+  }
+}
